@@ -19,11 +19,13 @@ jobs:
           targets: x86_64-pc-windows-msvc
       
       - name: Build binary
-        run: cargo build --release
+        run: |
+          cd zed-auto-updater
+          cargo build --release
       
       - name: Rename executable
         run: |
-          cd target/release
+          cd zed-auto-updater/target/release
           copy zed-auto-updater.exe zed-windows-auto-updater.exe
       
       - name: Create Release
@@ -43,6 +45,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./target/release/zed-windows-auto-updater.exe
+          asset_path: ./zed-auto-updater/target/release/zed-windows-auto-updater.exe
           asset_name: zed-windows-auto-updater.exe
           asset_content_type: application/octet-stream
