@@ -1,6 +1,6 @@
 [package]
 name = "zed-auto-updater"
-version = "0.1.0"
+version = "0.1.0"  # Change this to your new version
 edition = "2021"
 authors = ["Your Name <your.email@example.com>"]
 description = "Auto updater for Zed editor on Windows"
