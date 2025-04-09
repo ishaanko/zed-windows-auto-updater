@@ -39,7 +39,6 @@ A robust and reliable auto-update solution for the [Zed Editor](https://zed.dev/
 ```bash
 # Clone the repository
 git clone https://github.com/ishaanko/zed-windows-auto-updater.git
-cd ../zed-windows-auto-updater
 
 # Build the project
 cargo build --release
@@ -71,7 +70,7 @@ zed-auto-updater.exe --silent
 Force update to a specific version:
 
 ```bash
-zed-auto-updater.exe --version 1.4.2
+zed-auto-updater.exe --version
 ```
 
 ### Command Line Options
@@ -122,7 +121,6 @@ The project is organized into several modules:
 
 ```bash
 git clone https://github.com/ishaanko/zed-windows-auto-updater.git
-cd zed-windows-auto-updater
 cargo build
 ```
 
@@ -158,7 +156,3 @@ Logs are stored in `%APPDATA%\zed-auto-updater\logs` for troubleshooting.
 Contributions are welcome! Open PRs for features and bug-fixes!
 
 Please ensure your code follows the project's style guidelines and includes appropriate tests.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
