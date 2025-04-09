@@ -1,4 +1,4 @@
-# Zed Windows Auto-Updater
+# Zed Windows Auto Updater
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 ![Platform: Windows](https://img.shields.io/badge/Platform-Windows-blue.svg)
@@ -48,7 +48,7 @@ cargo build --release
 # Note: The official releases rename this to zed-windows-auto-updater.exe
 ```
 
-## 📖 Usage
+## Usage
 
 ### Manual Update Check
 
@@ -110,7 +110,7 @@ The project is organized into several modules:
   - `file_helper.rs`: File system operations
   - `process_helper.rs`: Process management (checking if Zed is running)
 
-## 🛠️ Development
+## Development
 
 ### Prerequisites
 
