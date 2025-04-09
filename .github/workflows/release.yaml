@@ -28,23 +28,9 @@ jobs:
           cd zed-auto-updater/target/release
           copy zed-auto-updater.exe zed-windows-auto-updater.exe
       
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ./zed-auto-updater/target/release/zed-windows-auto-updater.exe
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref_name }}
-          release_name: Release ${{ github.ref_name }}
-          draft: false
-          prerelease: false
-          
-      - name: Upload Binary
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./zed-auto-updater/target/release/zed-windows-auto-updater.exe
-          asset_name: zed-windows-auto-updater.exe
-          asset_content_type: application/octet-stream
