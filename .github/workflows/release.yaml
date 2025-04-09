@@ -19,18 +19,16 @@ jobs:
           targets: x86_64-pc-windows-msvc
       
       - name: Build binary
-        run: |
-          cd zed-auto-updater
-          cargo build --release
+        run: cargo build --release
       
       - name: Rename executable
         run: |
-          cd zed-auto-updater/target/release
+          cd target/release
           copy zed-auto-updater.exe zed-windows-auto-updater.exe
       
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: ./zed-auto-updater/target/release/zed-windows-auto-updater.exe
+          files: ./target/release/zed-windows-auto-updater.exe
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
