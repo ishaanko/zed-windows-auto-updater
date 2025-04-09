@@ -28,7 +28,7 @@ A robust and reliable auto-update solution for the [Zed Editor](https://zed.dev/
 
 ### Download Prebuilt Binary
 
-1. Download the latest release from the [Releases page](https://github.com/yourusername/zed-windows-auto-updater/releases)
+1. Download the latest release from the [Releases page](https://github.com/ishaanko/zed-windows-auto-updater/releases)
 2. Place the executable in your Zed installation directory
 3. For auto-startup, create a shortcut in your startup folder:
    - Press `Win+R`, type `shell:startup` and press Enter
@@ -38,7 +38,7 @@ A robust and reliable auto-update solution for the [Zed Editor](https://zed.dev/
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/zed-windows-auto-updater.git
+git clone https://github.com/ishaanko/zed-windows-auto-updater.git
 cd zed-windows-auto-updater
 
 # Build the project
