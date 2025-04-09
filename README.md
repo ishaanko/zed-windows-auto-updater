@@ -6,7 +6,7 @@
 
 A robust and reliable auto-update solution for the [Zed Editor](https://zed.dev/) on Windows. This utility automatically detects, downloads, and installs updates to ensure Windows users always have the latest Zed version without manual intervention.
 
-## 🚀 Features
+## Features
 
 - **Automatic Version Detection**: Compares local Zed installation with the latest GitHub release
 - **Smart Download Management**: Downloads only when updates are available with bandwidth-efficient transfers
@@ -17,14 +17,14 @@ A robust and reliable auto-update solution for the [Zed Editor](https://zed.dev/
 - **Integrity Verification**: Ensures downloaded files are complete and valid before installation
 - **Error Handling**: Robust error reporting and recovery mechanisms
 
-## 📋 Requirements
+## Requirements
 
 - Windows 10 or newer
 - Administrator privileges (for installation)
 - Internet connection
 - Minimum 100MB free disk space
 
-## 🔧 Installation
+## Installation
 
 ### Download Prebuilt Binary
 
@@ -83,7 +83,7 @@ zed-auto-updater.exe --version 1.4.2
 | `--force` | Force update even if latest version is installed |
 | `--log <path>` | Write logs to specified file |
 
-## 📊 How It Works
+## How It Works
 
 1. **Version Check**: The updater reads the current version from `zed-version.txt` and compares it with the latest release from GitHub API
 2. **Download Decision**: If a newer version is available, it fetches the Windows installer
@@ -93,7 +93,7 @@ zed-auto-updater.exe --version 1.4.2
 6. **Verification**: Confirms the installation was successful by checking for the existence of key files
 7. **Cleanup**: Removes temporary files and updates the local version record
 
-## 🏗️ Architecture
+## Architecture
 
 The project is organized into several modules:
 
@@ -137,7 +137,7 @@ cargo test
 cargo build --release
 ```
 
-## 🔍 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -154,22 +154,10 @@ Logs are stored in `%APPDATA%\zed-auto-updater\logs` for troubleshooting.
 
 ## 🤝 Contributing
 
-Contributions are welcome! Here's how you can help:
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m 'Add amazing feature'`
-4. Push to the branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
+Contributions are welcome! Open PRs for features and bug-fixes!
 
 Please ensure your code follows the project's style guidelines and includes appropriate tests.
 
-## 📜 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- [Zed Editor](https://zed.dev/) for creating an amazing editor
-- [reqwest](https://github.com/seanmonstar/reqwest) for HTTP requests
-- [tokio](https://github.com/tokio-rs/tokio) for async runtime
